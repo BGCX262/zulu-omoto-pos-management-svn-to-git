@@ -1,0 +1,1671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PointOfSaleManagementModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PointOfSaleManagementModelStoreContainer">
+          <EntitySet Name="Zulu_Address" EntityType="PointOfSaleManagementModel.Store.Zulu_Address" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_ButtonControl" EntityType="PointOfSaleManagementModel.Store.Zulu_ButtonControl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Category" EntityType="PointOfSaleManagementModel.Store.Zulu_Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_City" EntityType="PointOfSaleManagementModel.Store.Zulu_City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_CountryOfOrigin" EntityType="PointOfSaleManagementModel.Store.Zulu_CountryOfOrigin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_DamageByProductVariant" EntityType="PointOfSaleManagementModel.Store.Zulu_DamageByProductVariant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_DamageType" EntityType="PointOfSaleManagementModel.Store.Zulu_DamageType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Distributor" EntityType="PointOfSaleManagementModel.Store.Zulu_Distributor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_DistributorType" EntityType="PointOfSaleManagementModel.Store.Zulu_DistributorType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_FormControl" EntityType="PointOfSaleManagementModel.Store.Zulu_FormControl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Log" EntityType="PointOfSaleManagementModel.Store.Zulu_Log" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Media" EntityType="PointOfSaleManagementModel.Store.Zulu_Media" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Product" EntityType="PointOfSaleManagementModel.Store.Zulu_Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_ProductVariant" EntityType="PointOfSaleManagementModel.Store.Zulu_ProductVariant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Purchase" EntityType="PointOfSaleManagementModel.Store.Zulu_Purchase" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_PurchaseProductVariant" EntityType="PointOfSaleManagementModel.Store.Zulu_PurchaseProductVariant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Setting" EntityType="PointOfSaleManagementModel.Store.Zulu_Setting" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_State" EntityType="PointOfSaleManagementModel.Store.Zulu_State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_StockAllocation" EntityType="PointOfSaleManagementModel.Store.Zulu_StockAllocation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Supplier" EntityType="PointOfSaleManagementModel.Store.Zulu_Supplier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_User" EntityType="PointOfSaleManagementModel.Store.Zulu_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_UserAttribute" EntityType="PointOfSaleManagementModel.Store.Zulu_UserAttribute" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_UserRole" EntityType="PointOfSaleManagementModel.Store.Zulu_UserRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_UserRoleAttribute" EntityType="PointOfSaleManagementModel.Store.Zulu_UserRoleAttribute" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_Warehouse" EntityType="PointOfSaleManagementModel.Store.Zulu_Warehouse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zulu_WarehouseType" EntityType="PointOfSaleManagementModel.Store.Zulu_WarehouseType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Zulu_ButtonControl_Zulu_FormControl" Association="PointOfSaleManagementModel.Store.FK_Zulu_ButtonControl_Zulu_FormControl">
+            <End Role="Zulu_FormControl" EntitySet="Zulu_FormControl" />
+            <End Role="Zulu_ButtonControl" EntitySet="Zulu_ButtonControl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_City_Zulu_State" Association="PointOfSaleManagementModel.Store.FK_Zulu_City_Zulu_State">
+            <End Role="Zulu_State" EntitySet="Zulu_State" />
+            <End Role="Zulu_City" EntitySet="Zulu_City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_DamageByProductVariant_Zulu_DamageType" Association="PointOfSaleManagementModel.Store.FK_Zulu_DamageByProductVariant_Zulu_DamageType">
+            <End Role="Zulu_DamageType" EntitySet="Zulu_DamageType" />
+            <End Role="Zulu_DamageByProductVariant" EntitySet="Zulu_DamageByProductVariant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_DamageByProductVariant_Zulu_ProductVariant" Association="PointOfSaleManagementModel.Store.FK_Zulu_DamageByProductVariant_Zulu_ProductVariant">
+            <End Role="Zulu_ProductVariant" EntitySet="Zulu_ProductVariant" />
+            <End Role="Zulu_DamageByProductVariant" EntitySet="Zulu_DamageByProductVariant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Distributor_Zulu_Address" Association="PointOfSaleManagementModel.Store.FK_Zulu_Distributor_Zulu_Address">
+            <End Role="Zulu_Address" EntitySet="Zulu_Address" />
+            <End Role="Zulu_Distributor" EntitySet="Zulu_Distributor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Product_Zulu_Category" Association="PointOfSaleManagementModel.Store.FK_Zulu_Product_Zulu_Category">
+            <End Role="Zulu_Category" EntitySet="Zulu_Category" />
+            <End Role="Zulu_Product" EntitySet="Zulu_Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Product_Zulu_CountryOfOrigin" Association="PointOfSaleManagementModel.Store.FK_Zulu_Product_Zulu_CountryOfOrigin">
+            <End Role="Zulu_CountryOfOrigin" EntitySet="Zulu_CountryOfOrigin" />
+            <End Role="Zulu_Product" EntitySet="Zulu_Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Product_Zulu_Supplier" Association="PointOfSaleManagementModel.Store.FK_Zulu_Product_Zulu_Supplier">
+            <End Role="Zulu_Supplier" EntitySet="Zulu_Supplier" />
+            <End Role="Zulu_Product" EntitySet="Zulu_Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_ProductVariant_Zulu_Product" Association="PointOfSaleManagementModel.Store.FK_Zulu_ProductVariant_Zulu_Product">
+            <End Role="Zulu_Product" EntitySet="Zulu_Product" />
+            <End Role="Zulu_ProductVariant" EntitySet="Zulu_ProductVariant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_PurchaseProductVariant_Zulu_Purchase" Association="PointOfSaleManagementModel.Store.FK_Zulu_PurchaseProductVariant_Zulu_Purchase">
+            <End Role="Zulu_Purchase" EntitySet="Zulu_Purchase" />
+            <End Role="Zulu_PurchaseProductVariant" EntitySet="Zulu_PurchaseProductVariant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_User_Zulu_Address" Association="PointOfSaleManagementModel.Store.FK_Zulu_User_Zulu_Address">
+            <End Role="Zulu_Address" EntitySet="Zulu_Address" />
+            <End Role="Zulu_User" EntitySet="Zulu_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_User_Zulu_UserRole" Association="PointOfSaleManagementModel.Store.FK_Zulu_User_Zulu_UserRole">
+            <End Role="Zulu_UserRole" EntitySet="Zulu_UserRole" />
+            <End Role="Zulu_User" EntitySet="Zulu_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_UserAttribute_Zulu_User" Association="PointOfSaleManagementModel.Store.FK_Zulu_UserAttribute_Zulu_User">
+            <End Role="Zulu_User" EntitySet="Zulu_User" />
+            <End Role="Zulu_UserAttribute" EntitySet="Zulu_UserAttribute" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_UserRoleAttribute_Zulu_UserRole" Association="PointOfSaleManagementModel.Store.FK_Zulu_UserRoleAttribute_Zulu_UserRole">
+            <End Role="Zulu_UserRole" EntitySet="Zulu_UserRole" />
+            <End Role="Zulu_UserRoleAttribute" EntitySet="Zulu_UserRoleAttribute" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Warehouse_Zulu_Address" Association="PointOfSaleManagementModel.Store.FK_Zulu_Warehouse_Zulu_Address">
+            <End Role="Zulu_Address" EntitySet="Zulu_Address" />
+            <End Role="Zulu_Warehouse" EntitySet="Zulu_Warehouse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Warehouse_Zulu_Distributor" Association="PointOfSaleManagementModel.Store.FK_Zulu_Warehouse_Zulu_Distributor">
+            <End Role="Zulu_Distributor" EntitySet="Zulu_Distributor" />
+            <End Role="Zulu_Warehouse" EntitySet="Zulu_Warehouse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Warehouse_Zulu_ShopType" Association="PointOfSaleManagementModel.Store.FK_Zulu_Warehouse_Zulu_ShopType">
+            <End Role="Zulu_WarehouseType" EntitySet="Zulu_WarehouseType" />
+            <End Role="Zulu_Warehouse" EntitySet="Zulu_Warehouse" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Zulu_Address">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Name="AddressID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="250" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Zulu_ButtonControl">
+          <Key>
+            <PropertyRef Name="ButtonID" />
+          </Key>
+          <Property Name="ButtonID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FormID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Zulu_Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="ParentCategoryID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Zulu_CountryOfOrigin">
+          <Key>
+            <PropertyRef Name="CountryOfOriginID" />
+          </Key>
+          <Property Name="CountryOfOriginID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_DamageByProductVariant">
+          <Key>
+            <PropertyRef Name="DamageByProductVariantID" />
+          </Key>
+          <Property Name="DamageByProductVariantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DamageTypeID" Type="int" />
+          <Property Name="ProductVariantID" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="DamagePrice" Type="money" />
+          <Property Name="ShopID" Type="int" />
+          <Property Name="UserGUID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Zulu_DamageType">
+          <Key>
+            <PropertyRef Name="DamageTypeID" />
+          </Key>
+          <Property Name="DamageTypeID" Type="int" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="450" />
+          <Property Name="Description" Type="nvarchar" MaxLength="550" />
+          <Property Name="IsReturnable" Type="bit" />
+        </EntityType>
+        <EntityType Name="Zulu_Distributor">
+          <Key>
+            <PropertyRef Name="DistributorID" />
+          </Key>
+          <Property Name="DistributorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="DistributorTypeID" Type="int" />
+          <Property Name="AddressID" Type="int" />
+        </EntityType>
+        <EntityType Name="Zulu_DistributorType">
+          <Key>
+            <PropertyRef Name="DistributorTypeID" />
+          </Key>
+          <Property Name="DistributorTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_FormControl">
+          <Key>
+            <PropertyRef Name="FormID" />
+          </Key>
+          <Property Name="FormID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Zulu_Log">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Severity" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="FormName" Type="nvarchar" MaxLength="150" />
+          <Property Name="Exception" Type="nvarchar(max)" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1250" />
+        </EntityType>
+        <EntityType Name="Zulu_Media">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PictureBinary" Type="varbinary(max)" />
+          <Property Name="MimeType" Type="nvarchar" MaxLength="450" />
+          <Property Name="IsNew" Type="bit" />
+        </EntityType>
+        <EntityType Name="Zulu_Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="CountryOfOriginID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="SupplierID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_ProductVariant">
+          <Key>
+            <PropertyRef Name="ProductVariantID" />
+          </Key>
+          <Property Name="ProductVariantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="BarCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="PictureID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="RestrictedUnder18" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_Purchase">
+          <Key>
+            <PropertyRef Name="PurchaseID" />
+          </Key>
+          <Property Name="PurchaseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="VoucherNumber" Type="nvarchar" MaxLength="250" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+          <Property Name="ImportLicenseNumber" Type="nvarchar" MaxLength="250" />
+          <Property Name="CustomDutyAmount" Type="money" />
+          <Property Name="CommercialTaxAmunt" Type="money" />
+          <Property Name="AgentFees" Type="money" />
+          <Property Name="OtherTax" Type="money" />
+          <Property Name="CustomReleaseDate" Type="datetime" />
+          <Property Name="TotalQuantity" Type="int" />
+          <Property Name="TotalCost" Type="money" />
+        </EntityType>
+        <EntityType Name="Zulu_PurchaseProductVariant">
+          <Key>
+            <PropertyRef Name="PurchaseProductVariantID" />
+          </Key>
+          <Property Name="PurchaseProductVariantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PurchaseID" Type="int" />
+          <Property Name="PurchasedProductVariantBarcode" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductVariantName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="BuyingPrice" Type="money" />
+          <Property Name="CheckByUserID" Type="int" />
+          <Property Name="ActualQuantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Zulu_Setting">
+          <Key>
+            <PropertyRef Name="SettingID" />
+          </Key>
+          <Property Name="SettingID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Value" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="550" />
+        </EntityType>
+        <EntityType Name="Zulu_State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Zulu_StockAllocation">
+          <Key>
+            <PropertyRef Name="StockAllocationID" />
+          </Key>
+          <Property Name="StockAllocationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductVariantID" Type="int" />
+          <Property Name="FromWarehouseID" Type="int" />
+          <Property Name="ToWarehouseID" Type="int" />
+          <Property Name="PurchaseID" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="StockAllocationStatus" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddressID" Type="int" />
+        </EntityType>
+        <EntityType Name="Zulu_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserGUID" Type="uniqueidentifier" />
+          <Property Name="UserRoleID" Type="int" />
+          <Property Name="PictureID" Type="int" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="250" />
+          <Property Name="NRCNumber" Type="nvarchar" MaxLength="250" />
+          <Property Name="Username" Type="nvarchar" MaxLength="150" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="450" />
+          <Property Name="Salt" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressID" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_UserAttribute">
+          <Key>
+            <PropertyRef Name="UserAttributeID" />
+          </Key>
+          <Property Name="UserAttributeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="AttributeKey" Type="nvarchar(max)" />
+          <Property Name="Value" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Zulu_UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+          </Key>
+          <Property Name="UserRoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Zulu_UserRoleAttribute">
+          <Key>
+            <PropertyRef Name="UserRoleAttributeID" />
+          </Key>
+          <Property Name="UserRoleAttributeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserRoleID" Type="int" />
+          <Property Name="AttributeKey" Type="nvarchar(max)" />
+          <Property Name="Value" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Zulu_Warehouse">
+          <Key>
+            <PropertyRef Name="WarehouseID" />
+          </Key>
+          <Property Name="WarehouseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddressID" Type="int" />
+          <Property Name="WarehouseTypeID" Type="int" />
+          <Property Name="DistributorID" Type="int" />
+          <Property Name="IsPublished" Type="bit" />
+          <Property Name="PriceType" Type="int" />
+        </EntityType>
+        <EntityType Name="Zulu_WarehouseType">
+          <Key>
+            <PropertyRef Name="WarehouseTypeID" />
+          </Key>
+          <Property Name="WarehouseTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsDistributor" Type="bit" />
+          <Property Name="IsPublished" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Zulu_ButtonControl_Zulu_FormControl">
+          <End Role="Zulu_FormControl" Type="PointOfSaleManagementModel.Store.Zulu_FormControl" Multiplicity="0..1" />
+          <End Role="Zulu_ButtonControl" Type="PointOfSaleManagementModel.Store.Zulu_ButtonControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_FormControl">
+              <PropertyRef Name="FormID" />
+            </Principal>
+            <Dependent Role="Zulu_ButtonControl">
+              <PropertyRef Name="FormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_City_Zulu_State">
+          <End Role="Zulu_State" Type="PointOfSaleManagementModel.Store.Zulu_State" Multiplicity="0..1" />
+          <End Role="Zulu_City" Type="PointOfSaleManagementModel.Store.Zulu_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="Zulu_City">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_DamageByProductVariant_Zulu_DamageType">
+          <End Role="Zulu_DamageType" Type="PointOfSaleManagementModel.Store.Zulu_DamageType" Multiplicity="0..1" />
+          <End Role="Zulu_DamageByProductVariant" Type="PointOfSaleManagementModel.Store.Zulu_DamageByProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_DamageType">
+              <PropertyRef Name="DamageTypeID" />
+            </Principal>
+            <Dependent Role="Zulu_DamageByProductVariant">
+              <PropertyRef Name="DamageTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_DamageByProductVariant_Zulu_ProductVariant">
+          <End Role="Zulu_ProductVariant" Type="PointOfSaleManagementModel.Store.Zulu_ProductVariant" Multiplicity="0..1" />
+          <End Role="Zulu_DamageByProductVariant" Type="PointOfSaleManagementModel.Store.Zulu_DamageByProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_ProductVariant">
+              <PropertyRef Name="ProductVariantID" />
+            </Principal>
+            <Dependent Role="Zulu_DamageByProductVariant">
+              <PropertyRef Name="ProductVariantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Distributor_Zulu_Address">
+          <End Role="Zulu_Address" Type="PointOfSaleManagementModel.Store.Zulu_Address" Multiplicity="0..1" />
+          <End Role="Zulu_Distributor" Type="PointOfSaleManagementModel.Store.Zulu_Distributor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Zulu_Distributor">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Product_Zulu_Category">
+          <End Role="Zulu_Category" Type="PointOfSaleManagementModel.Store.Zulu_Category" Multiplicity="0..1" />
+          <End Role="Zulu_Product" Type="PointOfSaleManagementModel.Store.Zulu_Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Zulu_Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Product_Zulu_CountryOfOrigin">
+          <End Role="Zulu_CountryOfOrigin" Type="PointOfSaleManagementModel.Store.Zulu_CountryOfOrigin" Multiplicity="0..1" />
+          <End Role="Zulu_Product" Type="PointOfSaleManagementModel.Store.Zulu_Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_CountryOfOrigin">
+              <PropertyRef Name="CountryOfOriginID" />
+            </Principal>
+            <Dependent Role="Zulu_Product">
+              <PropertyRef Name="CountryOfOriginID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Product_Zulu_Supplier">
+          <End Role="Zulu_Supplier" Type="PointOfSaleManagementModel.Store.Zulu_Supplier" Multiplicity="0..1" />
+          <End Role="Zulu_Product" Type="PointOfSaleManagementModel.Store.Zulu_Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Zulu_Product">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_ProductVariant_Zulu_Product">
+          <End Role="Zulu_Product" Type="PointOfSaleManagementModel.Store.Zulu_Product" Multiplicity="0..1" />
+          <End Role="Zulu_ProductVariant" Type="PointOfSaleManagementModel.Store.Zulu_ProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Zulu_ProductVariant">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_PurchaseProductVariant_Zulu_Purchase">
+          <End Role="Zulu_Purchase" Type="PointOfSaleManagementModel.Store.Zulu_Purchase" Multiplicity="0..1" />
+          <End Role="Zulu_PurchaseProductVariant" Type="PointOfSaleManagementModel.Store.Zulu_PurchaseProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Purchase">
+              <PropertyRef Name="PurchaseID" />
+            </Principal>
+            <Dependent Role="Zulu_PurchaseProductVariant">
+              <PropertyRef Name="PurchaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_User_Zulu_Address">
+          <End Role="Zulu_Address" Type="PointOfSaleManagementModel.Store.Zulu_Address" Multiplicity="0..1" />
+          <End Role="Zulu_User" Type="PointOfSaleManagementModel.Store.Zulu_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Zulu_User">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_User_Zulu_UserRole">
+          <End Role="Zulu_UserRole" Type="PointOfSaleManagementModel.Store.Zulu_UserRole" Multiplicity="0..1" />
+          <End Role="Zulu_User" Type="PointOfSaleManagementModel.Store.Zulu_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_UserRole">
+              <PropertyRef Name="UserRoleID" />
+            </Principal>
+            <Dependent Role="Zulu_User">
+              <PropertyRef Name="UserRoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_UserAttribute_Zulu_User">
+          <End Role="Zulu_User" Type="PointOfSaleManagementModel.Store.Zulu_User" Multiplicity="0..1" />
+          <End Role="Zulu_UserAttribute" Type="PointOfSaleManagementModel.Store.Zulu_UserAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Zulu_UserAttribute">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_UserRoleAttribute_Zulu_UserRole">
+          <End Role="Zulu_UserRole" Type="PointOfSaleManagementModel.Store.Zulu_UserRole" Multiplicity="0..1" />
+          <End Role="Zulu_UserRoleAttribute" Type="PointOfSaleManagementModel.Store.Zulu_UserRoleAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_UserRole">
+              <PropertyRef Name="UserRoleID" />
+            </Principal>
+            <Dependent Role="Zulu_UserRoleAttribute">
+              <PropertyRef Name="UserRoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Warehouse_Zulu_Address">
+          <End Role="Zulu_Address" Type="PointOfSaleManagementModel.Store.Zulu_Address" Multiplicity="0..1" />
+          <End Role="Zulu_Warehouse" Type="PointOfSaleManagementModel.Store.Zulu_Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Zulu_Warehouse">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Warehouse_Zulu_Distributor">
+          <End Role="Zulu_Distributor" Type="PointOfSaleManagementModel.Store.Zulu_Distributor" Multiplicity="0..1" />
+          <End Role="Zulu_Warehouse" Type="PointOfSaleManagementModel.Store.Zulu_Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Distributor">
+              <PropertyRef Name="DistributorID" />
+            </Principal>
+            <Dependent Role="Zulu_Warehouse">
+              <PropertyRef Name="DistributorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Warehouse_Zulu_ShopType">
+          <End Role="Zulu_WarehouseType" Type="PointOfSaleManagementModel.Store.Zulu_WarehouseType" Multiplicity="0..1" />
+          <End Role="Zulu_Warehouse" Type="PointOfSaleManagementModel.Store.Zulu_Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_WarehouseType">
+              <PropertyRef Name="WarehouseTypeID" />
+            </Principal>
+            <Dependent Role="Zulu_Warehouse">
+              <PropertyRef Name="WarehouseTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PointOfSaleManagementModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ZuluDataContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="PointOfSaleManagementModel.Address" />
+          <EntitySet Name="ButtonControls" EntityType="PointOfSaleManagementModel.ButtonControl" />
+          <EntitySet Name="Categories" EntityType="PointOfSaleManagementModel.Category" />
+          <EntitySet Name="Cities" EntityType="PointOfSaleManagementModel.City" />
+          <EntitySet Name="CountryOfOrigins" EntityType="PointOfSaleManagementModel.CountryOfOrigin" />
+          <EntitySet Name="DamageByProductVariants" EntityType="PointOfSaleManagementModel.DamageByProductVariant" />
+          <EntitySet Name="DamageTypes" EntityType="PointOfSaleManagementModel.DamageType" />
+          <EntitySet Name="Distributors" EntityType="PointOfSaleManagementModel.Distributor" />
+          <EntitySet Name="DistributorTypes" EntityType="PointOfSaleManagementModel.DistributorType" />
+          <EntitySet Name="FormControls" EntityType="PointOfSaleManagementModel.FormControl" />
+          <EntitySet Name="Logs" EntityType="PointOfSaleManagementModel.Log" />
+          <EntitySet Name="Media" EntityType="PointOfSaleManagementModel.Media" />
+          <EntitySet Name="Products" EntityType="PointOfSaleManagementModel.Product" />
+          <EntitySet Name="ProductVariants" EntityType="PointOfSaleManagementModel.ProductVariant" />
+          <EntitySet Name="Purchases" EntityType="PointOfSaleManagementModel.Purchase" />
+          <EntitySet Name="PurchaseProductVariants" EntityType="PointOfSaleManagementModel.PurchaseProductVariant" />
+          <EntitySet Name="Settings" EntityType="PointOfSaleManagementModel.Setting" />
+          <EntitySet Name="States" EntityType="PointOfSaleManagementModel.State" />
+          <EntitySet Name="StockAllocations" EntityType="PointOfSaleManagementModel.StockAllocation" />
+          <EntitySet Name="Suppliers" EntityType="PointOfSaleManagementModel.Supplier" />
+          <EntitySet Name="Users" EntityType="PointOfSaleManagementModel.User" />
+          <EntitySet Name="UserAttributes" EntityType="PointOfSaleManagementModel.UserAttribute" />
+          <EntitySet Name="UserRoles" EntityType="PointOfSaleManagementModel.UserRole" />
+          <EntitySet Name="UserRoleAttributes" EntityType="PointOfSaleManagementModel.UserRoleAttribute" />
+          <EntitySet Name="Warehouses" EntityType="PointOfSaleManagementModel.Warehouse" />
+          <EntitySet Name="WarehouseTypes" EntityType="PointOfSaleManagementModel.WarehouseType" />
+          <AssociationSet Name="FK_Zulu_Distributor_Zulu_Address" Association="PointOfSaleManagementModel.FK_Zulu_Distributor_Zulu_Address">
+            <End Role="Zulu_Address" EntitySet="Addresses" />
+            <End Role="Zulu_Distributor" EntitySet="Distributors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_User_Zulu_Address" Association="PointOfSaleManagementModel.FK_Zulu_User_Zulu_Address">
+            <End Role="Zulu_Address" EntitySet="Addresses" />
+            <End Role="Zulu_User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Warehouse_Zulu_Address" Association="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Address">
+            <End Role="Zulu_Address" EntitySet="Addresses" />
+            <End Role="Zulu_Warehouse" EntitySet="Warehouses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_ButtonControl_Zulu_FormControl" Association="PointOfSaleManagementModel.FK_Zulu_ButtonControl_Zulu_FormControl">
+            <End Role="Zulu_FormControl" EntitySet="FormControls" />
+            <End Role="Zulu_ButtonControl" EntitySet="ButtonControls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Product_Zulu_Category" Association="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Category">
+            <End Role="Zulu_Category" EntitySet="Categories" />
+            <End Role="Zulu_Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_City_Zulu_State" Association="PointOfSaleManagementModel.FK_Zulu_City_Zulu_State">
+            <End Role="Zulu_State" EntitySet="States" />
+            <End Role="Zulu_City" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_DamageByProductVariant_Zulu_DamageType" Association="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_DamageType">
+            <End Role="Zulu_DamageType" EntitySet="DamageTypes" />
+            <End Role="Zulu_DamageByProductVariant" EntitySet="DamageByProductVariants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_DamageByProductVariant_Zulu_ProductVariant" Association="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_ProductVariant">
+            <End Role="Zulu_ProductVariant" EntitySet="ProductVariants" />
+            <End Role="Zulu_DamageByProductVariant" EntitySet="DamageByProductVariants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Warehouse_Zulu_Distributor" Association="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Distributor">
+            <End Role="Zulu_Distributor" EntitySet="Distributors" />
+            <End Role="Zulu_Warehouse" EntitySet="Warehouses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_ProductVariant_Zulu_Product" Association="PointOfSaleManagementModel.FK_Zulu_ProductVariant_Zulu_Product">
+            <End Role="Zulu_Product" EntitySet="Products" />
+            <End Role="Zulu_ProductVariant" EntitySet="ProductVariants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_PurchaseProductVariant_Zulu_Purchase" Association="PointOfSaleManagementModel.FK_Zulu_PurchaseProductVariant_Zulu_Purchase">
+            <End Role="Zulu_Purchase" EntitySet="Purchases" />
+            <End Role="Zulu_PurchaseProductVariant" EntitySet="PurchaseProductVariants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_User_Zulu_UserRole" Association="PointOfSaleManagementModel.FK_Zulu_User_Zulu_UserRole">
+            <End Role="Zulu_UserRole" EntitySet="UserRoles" />
+            <End Role="Zulu_User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_UserAttribute_Zulu_User" Association="PointOfSaleManagementModel.FK_Zulu_UserAttribute_Zulu_User">
+            <End Role="Zulu_User" EntitySet="Users" />
+            <End Role="Zulu_UserAttribute" EntitySet="UserAttributes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_UserRoleAttribute_Zulu_UserRole" Association="PointOfSaleManagementModel.FK_Zulu_UserRoleAttribute_Zulu_UserRole">
+            <End Role="Zulu_UserRole" EntitySet="UserRoles" />
+            <End Role="Zulu_UserRoleAttribute" EntitySet="UserRoleAttributes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Warehouse_Zulu_ShopType" Association="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_ShopType">
+            <End Role="Zulu_WarehouseType" EntitySet="WarehouseTypes" />
+            <End Role="Zulu_Warehouse" EntitySet="Warehouses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Product_Zulu_CountryOfOrigin" Association="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_CountryOfOrigin">
+            <End Role="CountryOfOrigin" EntitySet="CountryOfOrigins" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zulu_Product_Zulu_Supplier" Association="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Supplier">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Type="Int32" Name="AddressID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Address1" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address2" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" />
+          <Property Type="Int32" Name="StateID" />
+          <Property Type="String" Name="PhoneNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npDistributor" Relationship="PointOfSaleManagementModel.FK_Zulu_Distributor_Zulu_Address" FromRole="Zulu_Address" ToRole="Zulu_Distributor" />
+          <NavigationProperty Name="npUser" Relationship="PointOfSaleManagementModel.FK_Zulu_User_Zulu_Address" FromRole="Zulu_Address" ToRole="Zulu_User" />
+          <NavigationProperty Name="npWarehouse" Relationship="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Address" FromRole="Zulu_Address" ToRole="Zulu_Warehouse" />
+        </EntityType>
+        <EntityType Name="ButtonControl">
+          <Key>
+            <PropertyRef Name="ButtonID" />
+          </Key>
+          <Property Type="Int32" Name="ButtonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="FormID" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DisplayName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npFormControl" Relationship="PointOfSaleManagementModel.FK_Zulu_ButtonControl_Zulu_FormControl" FromRole="Zulu_ButtonControl" ToRole="Zulu_FormControl" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Type="Int32" Name="CategoryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+          <NavigationProperty Name="npProducts" Relationship="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Category" FromRole="Zulu_Category" ToRole="Zulu_Product" />
+          <Property Type="Int32" Name="ParentCategoryID" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Type="Int32" Name="CityID" Nullable="false" />
+          <Property Type="Int32" Name="StateID" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Abbreviation" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npState" Relationship="PointOfSaleManagementModel.FK_Zulu_City_Zulu_State" FromRole="Zulu_City" ToRole="Zulu_State" />
+        </EntityType>
+        <EntityType Name="CountryOfOrigin">
+          <Key>
+            <PropertyRef Name="CountryOfOriginID" />
+          </Key>
+          <Property Type="Int32" Name="CountryOfOriginID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CountryName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+          <NavigationProperty Name="npProduct" Relationship="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_CountryOfOrigin" FromRole="CountryOfOrigin" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="DamageByProductVariant">
+          <Key>
+            <PropertyRef Name="DamageByProductVariantID" />
+          </Key>
+          <Property Type="Int32" Name="DamageByProductVariantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DamageTypeID" />
+          <Property Type="Int32" Name="ProductVariantID" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="Decimal" Name="DamagePrice" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="ShopID" />
+          <NavigationProperty Name="npDamageType" Relationship="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_DamageType" FromRole="Zulu_DamageByProductVariant" ToRole="Zulu_DamageType" />
+          <NavigationProperty Name="npProductVariant" Relationship="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_ProductVariant" FromRole="Zulu_DamageByProductVariant" ToRole="Zulu_ProductVariant" />
+          <Property Type="Guid" Name="UserGUID" />
+        </EntityType>
+        <EntityType Name="DamageType">
+          <Key>
+            <PropertyRef Name="DamageTypeID" />
+          </Key>
+          <Property Type="Int32" Name="DamageTypeID" Nullable="false" />
+          <Property Type="String" Name="Type" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsReturnable" />
+          <NavigationProperty Name="npDamageByProductVariant" Relationship="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_DamageType" FromRole="Zulu_DamageType" ToRole="Zulu_DamageByProductVariant" />
+        </EntityType>
+        <EntityType Name="Distributor">
+          <Key>
+            <PropertyRef Name="DistributorID" />
+          </Key>
+          <Property Type="Int32" Name="DistributorID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DistributorTypeID" />
+          <Property Type="Int32" Name="AddressID" />
+          <NavigationProperty Name="npAddress" Relationship="PointOfSaleManagementModel.FK_Zulu_Distributor_Zulu_Address" FromRole="Zulu_Distributor" ToRole="Zulu_Address" />
+          <NavigationProperty Name="npWarehouse" Relationship="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Distributor" FromRole="Zulu_Distributor" ToRole="Zulu_Warehouse" />
+        </EntityType>
+        <EntityType Name="DistributorType">
+          <Key>
+            <PropertyRef Name="DistributorTypeID" />
+          </Key>
+          <Property Type="Int32" Name="DistributorTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+        </EntityType>
+        <EntityType Name="FormControl">
+          <Key>
+            <PropertyRef Name="FormID" />
+          </Key>
+          <Property Type="Int32" Name="FormID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DisplayName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npButtonControls" Relationship="PointOfSaleManagementModel.FK_Zulu_ButtonControl_Zulu_FormControl" FromRole="Zulu_FormControl" ToRole="Zulu_ButtonControl" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Type="Int32" Name="LogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="Int32" Name="Severity" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="String" Name="FormName" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Exception" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Message" MaxLength="1250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Media">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Type="Int32" Name="MediaID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Binary" Name="PictureBinary" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="MimeType" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsNew" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Type="Int32" Name="ProductID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CountryOfOriginID" />
+          <Property Type="Int32" Name="CategoryID" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+          <NavigationProperty Name="npCategory" Relationship="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Category" FromRole="Zulu_Product" ToRole="Zulu_Category" />
+          <NavigationProperty Name="npProductVariants" Relationship="PointOfSaleManagementModel.FK_Zulu_ProductVariant_Zulu_Product" FromRole="Zulu_Product" ToRole="Zulu_ProductVariant" />
+          <NavigationProperty Name="npCountryOfOrigin" Relationship="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_CountryOfOrigin" FromRole="Product" ToRole="CountryOfOrigin" />
+          <Property Type="Int32" Name="SupplierID" />
+          <NavigationProperty Name="npSupplier" Relationship="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Supplier" FromRole="Product" ToRole="Supplier" />
+        </EntityType>
+        <EntityType Name="ProductVariant">
+          <Key>
+            <PropertyRef Name="ProductVariantID" />
+          </Key>
+          <Property Type="Int32" Name="ProductVariantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BarCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductID" />
+          <Property Type="Int32" Name="PictureID" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="Boolean" Name="RestrictedUnder18" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+          <NavigationProperty Name="npDamageByProductVariants" Relationship="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_ProductVariant" FromRole="Zulu_ProductVariant" ToRole="Zulu_DamageByProductVariant" />
+          <NavigationProperty Name="npProduct" Relationship="PointOfSaleManagementModel.FK_Zulu_ProductVariant_Zulu_Product" FromRole="Zulu_ProductVariant" ToRole="Zulu_Product" />
+        </EntityType>
+        <EntityType Name="Purchase">
+          <Key>
+            <PropertyRef Name="PurchaseID" />
+          </Key>
+          <Property Type="Int32" Name="PurchaseID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="String" Name="VoucherNumber" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ImportLicenseNumber" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CustomDutyAmount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="CommercialTaxAmunt" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="AgentFees" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="OtherTax" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="CustomReleaseDate" />
+          <Property Type="Int32" Name="TotalQuantity" />
+          <Property Type="Decimal" Name="TotalCost" Precision="19" Scale="4" />
+          <NavigationProperty Name="npPurchaseProductVariants" Relationship="PointOfSaleManagementModel.FK_Zulu_PurchaseProductVariant_Zulu_Purchase" FromRole="Zulu_Purchase" ToRole="Zulu_PurchaseProductVariant" />
+        </EntityType>
+        <EntityType Name="PurchaseProductVariant">
+          <Key>
+            <PropertyRef Name="PurchaseProductVariantID" />
+          </Key>
+          <Property Type="Int32" Name="PurchaseProductVariantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PurchaseID" />
+          <Property Type="String" Name="PurchasedProductVariantBarcode" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProductVariantName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="Decimal" Name="BuyingPrice" Precision="19" Scale="4" />
+          <NavigationProperty Name="npPurchase" Relationship="PointOfSaleManagementModel.FK_Zulu_PurchaseProductVariant_Zulu_Purchase" FromRole="Zulu_PurchaseProductVariant" ToRole="Zulu_Purchase" />
+          <Property Type="Int32" Name="CheckByUserID" />
+          <Property Type="Int32" Name="ActualQuantity" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="SettingID" />
+          </Key>
+          <Property Type="Int32" Name="SettingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Value" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="550" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Type="Int32" Name="StateID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Abbreviation" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npCities" Relationship="PointOfSaleManagementModel.FK_Zulu_City_Zulu_State" FromRole="Zulu_State" ToRole="Zulu_City" />
+        </EntityType>
+        <EntityType Name="StockAllocation">
+          <Key>
+            <PropertyRef Name="StockAllocationID" />
+          </Key>
+          <Property Type="Int32" Name="StockAllocationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ProductVariantID" />
+          <Property Type="Int32" Name="FromWarehouseID" />
+          <Property Type="Int32" Name="ToWarehouseID" />
+          <Property Type="Int32" Name="PurchaseID" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="Int32" Name="StockAllocationStatus" />
+          <Property Type="DateTime" Name="CreatedOn" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Type="Int32" Name="SupplierID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AddressID" />
+          <NavigationProperty Name="npProducts" Relationship="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Supplier" FromRole="Supplier" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="UserGUID" />
+          <Property Type="Int32" Name="UserRoleID" />
+          <Property Type="Int32" Name="PictureID" />
+          <Property Type="String" Name="FullName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Gender" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NRCNumber" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Username" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordHash" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Salt" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AddressID" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+          <NavigationProperty Name="npAddress" Relationship="PointOfSaleManagementModel.FK_Zulu_User_Zulu_Address" FromRole="Zulu_User" ToRole="Zulu_Address" />
+          <NavigationProperty Name="npUserRole" Relationship="PointOfSaleManagementModel.FK_Zulu_User_Zulu_UserRole" FromRole="Zulu_User" ToRole="Zulu_UserRole" />
+          <NavigationProperty Name="npUserAttributes" Relationship="PointOfSaleManagementModel.FK_Zulu_UserAttribute_Zulu_User" FromRole="Zulu_User" ToRole="Zulu_UserAttribute" />
+        </EntityType>
+        <EntityType Name="UserAttribute">
+          <Key>
+            <PropertyRef Name="UserAttributeID" />
+          </Key>
+          <Property Type="Int32" Name="UserAttributeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="String" Name="AttributeKey" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Value" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npUser" Relationship="PointOfSaleManagementModel.FK_Zulu_UserAttribute_Zulu_User" FromRole="Zulu_UserAttribute" ToRole="Zulu_User" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+          </Key>
+          <Property Type="Int32" Name="UserRoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedOn" />
+          <Property Type="DateTime" Name="UpdatedOn" />
+          <NavigationProperty Name="npUsers" Relationship="PointOfSaleManagementModel.FK_Zulu_User_Zulu_UserRole" FromRole="Zulu_UserRole" ToRole="Zulu_User" />
+          <NavigationProperty Name="npUserRoleAttributes" Relationship="PointOfSaleManagementModel.FK_Zulu_UserRoleAttribute_Zulu_UserRole" FromRole="Zulu_UserRole" ToRole="Zulu_UserRoleAttribute" />
+        </EntityType>
+        <EntityType Name="UserRoleAttribute">
+          <Key>
+            <PropertyRef Name="UserRoleAttributeID" />
+          </Key>
+          <Property Type="Int32" Name="UserRoleAttributeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserRoleID" />
+          <Property Type="String" Name="AttributeKey" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Value" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="npUserRole" Relationship="PointOfSaleManagementModel.FK_Zulu_UserRoleAttribute_Zulu_UserRole" FromRole="Zulu_UserRoleAttribute" ToRole="Zulu_UserRole" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="WarehouseID" />
+          </Key>
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AddressID" />
+          <Property Type="Int32" Name="WarehouseTypeID" />
+          <Property Type="Int32" Name="DistributorID" />
+          <Property Type="Boolean" Name="IsPublished" />
+          <Property Type="Int32" Name="PriceType" />
+          <NavigationProperty Name="npAddress" Relationship="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Address" FromRole="Zulu_Warehouse" ToRole="Zulu_Address" />
+          <NavigationProperty Name="npDistributor" Relationship="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Distributor" FromRole="Zulu_Warehouse" ToRole="Zulu_Distributor" />
+          <NavigationProperty Name="npWarehouseType" Relationship="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_ShopType" FromRole="Zulu_Warehouse" ToRole="Zulu_WarehouseType" />
+        </EntityType>
+        <EntityType Name="WarehouseType">
+          <Key>
+            <PropertyRef Name="WarehouseTypeID" />
+          </Key>
+          <Property Type="Int32" Name="WarehouseTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsDistributor" />
+          <Property Type="Boolean" Name="IsPublished" />
+          <NavigationProperty Name="npWarehouses" Relationship="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_ShopType" FromRole="Zulu_WarehouseType" ToRole="Zulu_Warehouse" />
+        </EntityType>
+        <Association Name="FK_Zulu_Distributor_Zulu_Address">
+          <End Type="PointOfSaleManagementModel.Address" Role="Zulu_Address" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Distributor" Role="Zulu_Distributor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Zulu_Distributor">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_User_Zulu_Address">
+          <End Type="PointOfSaleManagementModel.Address" Role="Zulu_Address" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.User" Role="Zulu_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Zulu_User">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Warehouse_Zulu_Address">
+          <End Type="PointOfSaleManagementModel.Address" Role="Zulu_Address" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Warehouse" Role="Zulu_Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Zulu_Warehouse">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_ButtonControl_Zulu_FormControl">
+          <End Type="PointOfSaleManagementModel.FormControl" Role="Zulu_FormControl" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.ButtonControl" Role="Zulu_ButtonControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_FormControl">
+              <PropertyRef Name="FormID" />
+            </Principal>
+            <Dependent Role="Zulu_ButtonControl">
+              <PropertyRef Name="FormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Product_Zulu_Category">
+          <End Type="PointOfSaleManagementModel.Category" Role="Zulu_Category" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Product" Role="Zulu_Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Zulu_Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_City_Zulu_State">
+          <End Type="PointOfSaleManagementModel.State" Role="Zulu_State" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.City" Role="Zulu_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="Zulu_City">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_DamageByProductVariant_Zulu_DamageType">
+          <End Type="PointOfSaleManagementModel.DamageType" Role="Zulu_DamageType" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.DamageByProductVariant" Role="Zulu_DamageByProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_DamageType">
+              <PropertyRef Name="DamageTypeID" />
+            </Principal>
+            <Dependent Role="Zulu_DamageByProductVariant">
+              <PropertyRef Name="DamageTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_DamageByProductVariant_Zulu_ProductVariant">
+          <End Type="PointOfSaleManagementModel.ProductVariant" Role="Zulu_ProductVariant" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.DamageByProductVariant" Role="Zulu_DamageByProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_ProductVariant">
+              <PropertyRef Name="ProductVariantID" />
+            </Principal>
+            <Dependent Role="Zulu_DamageByProductVariant">
+              <PropertyRef Name="ProductVariantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Warehouse_Zulu_Distributor">
+          <End Type="PointOfSaleManagementModel.Distributor" Role="Zulu_Distributor" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Warehouse" Role="Zulu_Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Distributor">
+              <PropertyRef Name="DistributorID" />
+            </Principal>
+            <Dependent Role="Zulu_Warehouse">
+              <PropertyRef Name="DistributorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_ProductVariant_Zulu_Product">
+          <End Type="PointOfSaleManagementModel.Product" Role="Zulu_Product" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.ProductVariant" Role="Zulu_ProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Zulu_ProductVariant">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_PurchaseProductVariant_Zulu_Purchase">
+          <End Type="PointOfSaleManagementModel.Purchase" Role="Zulu_Purchase" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.PurchaseProductVariant" Role="Zulu_PurchaseProductVariant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_Purchase">
+              <PropertyRef Name="PurchaseID" />
+            </Principal>
+            <Dependent Role="Zulu_PurchaseProductVariant">
+              <PropertyRef Name="PurchaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_User_Zulu_UserRole">
+          <End Type="PointOfSaleManagementModel.UserRole" Role="Zulu_UserRole" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.User" Role="Zulu_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_UserRole">
+              <PropertyRef Name="UserRoleID" />
+            </Principal>
+            <Dependent Role="Zulu_User">
+              <PropertyRef Name="UserRoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_UserAttribute_Zulu_User">
+          <End Type="PointOfSaleManagementModel.User" Role="Zulu_User" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.UserAttribute" Role="Zulu_UserAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Zulu_UserAttribute">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_UserRoleAttribute_Zulu_UserRole">
+          <End Type="PointOfSaleManagementModel.UserRole" Role="Zulu_UserRole" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.UserRoleAttribute" Role="Zulu_UserRoleAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_UserRole">
+              <PropertyRef Name="UserRoleID" />
+            </Principal>
+            <Dependent Role="Zulu_UserRoleAttribute">
+              <PropertyRef Name="UserRoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Warehouse_Zulu_ShopType">
+          <End Type="PointOfSaleManagementModel.WarehouseType" Role="Zulu_WarehouseType" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Warehouse" Role="Zulu_Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zulu_WarehouseType">
+              <PropertyRef Name="WarehouseTypeID" />
+            </Principal>
+            <Dependent Role="Zulu_Warehouse">
+              <PropertyRef Name="WarehouseTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Product_Zulu_CountryOfOrigin">
+          <End Type="PointOfSaleManagementModel.CountryOfOrigin" Role="CountryOfOrigin" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CountryOfOrigin">
+              <PropertyRef Name="CountryOfOriginID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CountryOfOriginID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zulu_Product_Zulu_Supplier">
+          <End Type="PointOfSaleManagementModel.Supplier" Role="Supplier" Multiplicity="0..1" />
+          <End Type="PointOfSaleManagementModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PointOfSaleManagementModelStoreContainer" CdmEntityContainer="ZuluDataContext">
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Address">
+              <MappingFragment StoreEntitySet="Zulu_Address">
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ButtonControls">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.ButtonControl">
+              <MappingFragment StoreEntitySet="Zulu_ButtonControl">
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FormID" ColumnName="FormID" />
+                <ScalarProperty Name="ButtonID" ColumnName="ButtonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Category">
+              <MappingFragment StoreEntitySet="Zulu_Category">
+                <ScalarProperty Name="ParentCategoryID" ColumnName="ParentCategoryID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.City">
+              <MappingFragment StoreEntitySet="Zulu_City">
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CountryOfOrigins">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.CountryOfOrigin">
+              <MappingFragment StoreEntitySet="Zulu_CountryOfOrigin">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryOfOriginID" ColumnName="CountryOfOriginID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DamageByProductVariants">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.DamageByProductVariant">
+              <MappingFragment StoreEntitySet="Zulu_DamageByProductVariant">
+                <ScalarProperty Name="UserGUID" ColumnName="UserGUID" />
+                <ScalarProperty Name="ShopID" ColumnName="ShopID" />
+                <ScalarProperty Name="DamagePrice" ColumnName="DamagePrice" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductVariantID" ColumnName="ProductVariantID" />
+                <ScalarProperty Name="DamageTypeID" ColumnName="DamageTypeID" />
+                <ScalarProperty Name="DamageByProductVariantID" ColumnName="DamageByProductVariantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DamageTypes">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.DamageType">
+              <MappingFragment StoreEntitySet="Zulu_DamageType">
+                <ScalarProperty Name="IsReturnable" ColumnName="IsReturnable" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="DamageTypeID" ColumnName="DamageTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Distributors">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Distributor">
+              <MappingFragment StoreEntitySet="Zulu_Distributor">
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="DistributorTypeID" ColumnName="DistributorTypeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DistributorID" ColumnName="DistributorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DistributorTypes">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.DistributorType">
+              <MappingFragment StoreEntitySet="Zulu_DistributorType">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DistributorTypeID" ColumnName="DistributorTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormControls">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.FormControl">
+              <MappingFragment StoreEntitySet="Zulu_FormControl">
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FormID" ColumnName="FormID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Log">
+              <MappingFragment StoreEntitySet="Zulu_Log">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="FormName" ColumnName="FormName" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Severity" ColumnName="Severity" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Media">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Media">
+              <MappingFragment StoreEntitySet="Zulu_Media">
+                <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+                <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+                <ScalarProperty Name="PictureBinary" ColumnName="PictureBinary" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Product">
+              <MappingFragment StoreEntitySet="Zulu_Product">
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CountryOfOriginID" ColumnName="CountryOfOriginID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductVariants">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.ProductVariant">
+              <MappingFragment StoreEntitySet="Zulu_ProductVariant">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="RestrictedUnder18" ColumnName="RestrictedUnder18" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductVariantID" ColumnName="ProductVariantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Purchases">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Purchase">
+              <MappingFragment StoreEntitySet="Zulu_Purchase">
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+                <ScalarProperty Name="CustomReleaseDate" ColumnName="CustomReleaseDate" />
+                <ScalarProperty Name="OtherTax" ColumnName="OtherTax" />
+                <ScalarProperty Name="AgentFees" ColumnName="AgentFees" />
+                <ScalarProperty Name="CommercialTaxAmunt" ColumnName="CommercialTaxAmunt" />
+                <ScalarProperty Name="CustomDutyAmount" ColumnName="CustomDutyAmount" />
+                <ScalarProperty Name="ImportLicenseNumber" ColumnName="ImportLicenseNumber" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="VoucherNumber" ColumnName="VoucherNumber" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseProductVariants">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.PurchaseProductVariant">
+              <MappingFragment StoreEntitySet="Zulu_PurchaseProductVariant">
+                <ScalarProperty Name="ActualQuantity" ColumnName="ActualQuantity" />
+                <ScalarProperty Name="CheckByUserID" ColumnName="CheckByUserID" />
+                <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductVariantName" ColumnName="ProductVariantName" />
+                <ScalarProperty Name="PurchasedProductVariantBarcode" ColumnName="PurchasedProductVariantBarcode" />
+                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+                <ScalarProperty Name="PurchaseProductVariantID" ColumnName="PurchaseProductVariantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Setting">
+              <MappingFragment StoreEntitySet="Zulu_Setting">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.State">
+              <MappingFragment StoreEntitySet="Zulu_State">
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockAllocations">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.StockAllocation">
+              <MappingFragment StoreEntitySet="Zulu_StockAllocation">
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="StockAllocationStatus" ColumnName="StockAllocationStatus" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+                <ScalarProperty Name="ToWarehouseID" ColumnName="ToWarehouseID" />
+                <ScalarProperty Name="FromWarehouseID" ColumnName="FromWarehouseID" />
+                <ScalarProperty Name="ProductVariantID" ColumnName="ProductVariantID" />
+                <ScalarProperty Name="StockAllocationID" ColumnName="StockAllocationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Supplier">
+              <MappingFragment StoreEntitySet="Zulu_Supplier">
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.User">
+              <MappingFragment StoreEntitySet="Zulu_User">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="NRCNumber" ColumnName="NRCNumber" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+                <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+                <ScalarProperty Name="UserGUID" ColumnName="UserGUID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAttributes">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.UserAttribute">
+              <MappingFragment StoreEntitySet="Zulu_UserAttribute">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="AttributeKey" ColumnName="AttributeKey" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserAttributeID" ColumnName="UserAttributeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.UserRole">
+              <MappingFragment StoreEntitySet="Zulu_UserRole">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoleAttributes">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.UserRoleAttribute">
+              <MappingFragment StoreEntitySet="Zulu_UserRoleAttribute">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="AttributeKey" ColumnName="AttributeKey" />
+                <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+                <ScalarProperty Name="UserRoleAttributeID" ColumnName="UserRoleAttributeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Warehouses">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.Warehouse">
+              <MappingFragment StoreEntitySet="Zulu_Warehouse">
+                <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="DistributorID" ColumnName="DistributorID" />
+                <ScalarProperty Name="WarehouseTypeID" ColumnName="WarehouseTypeID" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WarehouseTypes">
+            <EntityTypeMapping TypeName="PointOfSaleManagementModel.WarehouseType">
+              <MappingFragment StoreEntitySet="Zulu_WarehouseType">
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="IsDistributor" ColumnName="IsDistributor" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="WarehouseTypeID" ColumnName="WarehouseTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ZuluDataModel">
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Address" Width="1.5" PointX="0.75" PointY="5.5" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.ButtonControl" Width="1.5" PointX="15" PointY="14.625" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Category" Width="1.5" PointX="7.75" PointY="3.125" Height="2.3648893229166665" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.City" Width="1.5" PointX="8" PointY="10.625" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.CountryOfOrigin" Width="1.5" PointX="8.125" PointY="6.5" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.DamageByProductVariant" Width="1.5" PointX="14.5" PointY="3.125" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.DamageType" Width="1.5" PointX="12.25" PointY="7.5" Height="1.9802864583333237" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Distributor" Width="1.5" PointX="3" PointY="5.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.DistributorType" Width="1.5" PointX="7.75" PointY="13.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.FormControl" Width="1.5" PointX="12.75" PointY="14.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Log" Width="1.5" PointX="0.75" PointY="15.375" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Media" Width="1.5" PointX="2.75" PointY="15.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Product" Width="1.5" PointX="10" PointY="3" Height="2.9417936197916532" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.ProductVariant" Width="1.5" PointX="12.25" PointY="2.625" Height="3.3263964843749996" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Purchase" Width="1.5" PointX="10.75" PointY="10.625" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.PurchaseProductVariant" Width="1.5" PointX="13" PointY="11.25" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Setting" Width="1.5" PointX="4.75" PointY="16.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.State" Width="1.5" PointX="5.75" PointY="10.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.StockAllocation" Width="1.5" PointX="14.75" PointY="7.375" Height="2.5571907552083255" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Supplier" Width="1.5" PointX="10" PointY="7.5" Height="1.9802864583333522" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.User" Width="1.5" PointX="3" PointY="0.75" Height="4.2879036458333246" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.UserAttribute" Width="1.5" PointX="5.25" PointY="2.625" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.UserRole" Width="1.5" PointX="0.75" PointY="2" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.UserRoleAttribute" Width="1.5" PointX="3" PointY="11.875" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.Warehouse" Width="1.5" PointX="5.25" PointY="5.375" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="PointOfSaleManagementModel.WarehouseType" Width="1.5" PointX="3" PointY="8.875" Height="1.980286458333353" />
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Distributor_Zulu_Address" >
+          <ConnectorPoint PointX="2.25" PointY="6.8362939453125051" />
+          <ConnectorPoint PointX="2.7291666666666665" PointY="6.8362939453125042" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="6.8362939453125051" />
+          <ConnectorPoint PointX="3" PointY="6.8362939453125051" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_User_Zulu_Address" >
+          <ConnectorPoint PointX="2.25" PointY="5.5" />
+          <ConnectorPoint PointX="2.625" PointY="5.125" />
+          <ConnectorPoint PointX="2.625" PointY="5.4129036458333246" />
+          <ConnectorPoint PointX="2.7535744349011204" PointY="5.2843292109322029" />
+          <ConnectorPoint PointX="2.8714255650988791" PointY="5.1664780807344455" />
+          <ConnectorPoint PointX="3" PointY="5.0379036458333246" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Address" >
+          <ConnectorPoint PointX="2.25" PointY="8.11729003906251" />
+          <ConnectorPoint PointX="2.7291666666666665" PointY="8.11729003906251" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="8.11729003906251" />
+          <ConnectorPoint PointX="5.25" PointY="8.11729003906251" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_ButtonControl_Zulu_FormControl" >
+          <ConnectorPoint PointX="14.25" PointY="15.643992513020834" />
+          <ConnectorPoint PointX="15" PointY="15.643992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Category" >
+          <ConnectorPoint PointX="9.25" PointY="4.4035953776041659" />
+          <ConnectorPoint PointX="10" PointY="4.4035953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_City_Zulu_State" >
+          <ConnectorPoint PointX="7.25" PointY="11.643992513020834" />
+          <ConnectorPoint PointX="8" PointY="11.643992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_DamageType" >
+          <ConnectorPoint PointX="13.75" PointY="7.5" />
+          <ConnectorPoint PointX="14.125" PointY="7.125" />
+          <ConnectorPoint PointX="14.125" PointY="4.9395853333333353" />
+          <ConnectorPoint PointX="14.5" PointY="4.9395853333333353" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_DamageByProductVariant_Zulu_ProductVariant" >
+          <ConnectorPoint PointX="13.75" PointY="3.9697926666666676" />
+          <ConnectorPoint PointX="14.5" PointY="3.9697926666666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_Distributor" >
+          <ConnectorPoint PointX="4.5" PointY="6.8362939453125051" />
+          <ConnectorPoint PointX="5.25" PointY="6.8362939453125051" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_ProductVariant_Zulu_Product" >
+          <ConnectorPoint PointX="11.5" PointY="4.3795475260416659" />
+          <ConnectorPoint PointX="12.25" PointY="4.3795475260416659" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_PurchaseProductVariant_Zulu_Purchase" >
+          <ConnectorPoint PointX="12.25" PointY="12.624746093750002" />
+          <ConnectorPoint PointX="13" PointY="12.624746093750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_User_Zulu_UserRole" >
+          <ConnectorPoint PointX="2.25" PointY="3.1824446614583337" />
+          <ConnectorPoint PointX="3" PointY="3.1824446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_UserAttribute_Zulu_User" >
+          <ConnectorPoint PointX="4.5" PointY="3.6151432291666765" />
+          <ConnectorPoint PointX="5.25" PointY="3.6151432291666765" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_UserRoleAttribute_Zulu_UserRole" >
+          <ConnectorPoint PointX="2.25" PointY="4.3025806306089747" />
+          <ConnectorPoint PointX="2.8125" PointY="4.8650806306089747" />
+          <ConnectorPoint PointX="2.8125" PointY="12.865143229166677" />
+          <ConnectorPoint PointX="3" PointY="12.865143229166677" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Warehouse_Zulu_ShopType" >
+          <ConnectorPoint PointX="4.5" PointY="9.78125" />
+          <ConnectorPoint PointX="5.46875" PointY="9.78125" />
+          <ConnectorPoint PointX="5.46875" PointY="8.3167936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_CountryOfOrigin" >
+          <ConnectorPoint PointX="8.875" PointY="6.5" />
+          <ConnectorPoint PointX="8.875" PointY="6.125" />
+          <ConnectorPoint PointX="9.625" PointY="6.125" />
+          <ConnectorPoint PointX="9.625" PointY="4.7593489583333328" />
+          <ConnectorPoint PointX="10" PointY="4.7593489583333328" />
+        </AssociationConnector>
+        <AssociationConnector Association="PointOfSaleManagementModel.FK_Zulu_Product_Zulu_Supplier" >
+          <ConnectorPoint PointX="10.75" PointY="7.5" />
+          <ConnectorPoint PointX="10.75" PointY="6.5186979166666656" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

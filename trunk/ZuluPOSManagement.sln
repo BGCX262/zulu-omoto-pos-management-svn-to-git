@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZuluPOSManagement", "ZuluPOSManagement\ZuluPOSManagement.csproj", "{873251C0-B437-4345-A447-AA16B31FF63B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zulu.CommonBusiness", "Zulu.CommonBusiness", "{2A14299B-C9C8-4D40-B5EF-53E412FED283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zulu.BusinessService", "ZuluBusinessService\Zulu.BusinessService\Zulu.BusinessService.csproj", "{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{7B7066CF-8396-479F-8D92-432B08B1EDA4}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencies\EntityFramework.dll = Dependencies\EntityFramework.dll
+		Dependencies\LINQtoCSV.dll = Dependencies\LINQtoCSV.dll
+		Dependencies\Microsoft.Practices.ServiceLocation.dll = Dependencies\Microsoft.Practices.ServiceLocation.dll
+		Dependencies\Microsoft.Practices.Unity.Configuration.dll = Dependencies\Microsoft.Practices.Unity.Configuration.dll
+		Dependencies\Microsoft.Practices.Unity.dll = Dependencies\Microsoft.Practices.Unity.dll
+		Dependencies\Microsoft.Practices.Unity.Interception.Configuration.dll = Dependencies\Microsoft.Practices.Unity.Interception.Configuration.dll
+		Dependencies\Microsoft.Practices.Unity.Interception.dll = Dependencies\Microsoft.Practices.Unity.Interception.dll
+		Dependencies\MonoCross.Utilities.dll = Dependencies\MonoCross.Utilities.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zulu.SyncService", "Zulu.SyncService\Zulu.SyncService.csproj", "{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zulu.SyncModel", "Zulu.SyncModel\Zulu.SyncModel.csproj", "{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{873251C0-B437-4345-A447-AA16B31FF63B}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{873251C0-B437-4345-A447-AA16B31FF63B}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE} = {2A14299B-C9C8-4D40-B5EF-53E412FED283}
+		{ABC6F446-627A-41EE-BCD7-4BC8CC3D2EF7} = {2A14299B-C9C8-4D40-B5EF-53E412FED283}
+		{5541BAB4-EB09-4719-9E10-5A3BC38E7E61} = {2A14299B-C9C8-4D40-B5EF-53E412FED283}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7F89713-F796-4BA4-8B7F-C2992AC2F7EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zulu.BusinessService</RootNamespace>
+    <AssemblyName>Zulu.BusinessService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\..\Visual Studio 2012\Projects\ZuluPOSManagement\Dependencies\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="LINQtoCSV">
+      <HintPath>..\..\Dependencies\LINQtoCSV.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Dependencies\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\Dependencies\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\Dependencies\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\..\Dependencies\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoCross.Utilities">
+      <HintPath>..\..\Dependencies\MonoCross.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="BulkProductImport\InvoiceProduct.cs" />
+    <Compile Include="BulkProductImport\InvoiceProductImporter.cs" />
+    <Compile Include="Configuration\ZuluConfig.cs" />
+    <Compile Include="Damages\DamageByProductVariant.cs" />
+    <Compile Include="Damages\DamageService.cs" />
+    <Compile Include="Damages\DamageType.cs" />
+    <Compile Include="Damages\IDamageService.cs" />
+    <Compile Include="Data\Address.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ButtonControl.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Category.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\City.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CountryOfOrigin.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DamageByProductVariant.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DamageType.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Distributor.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DistributorType.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Extension.cs" />
+    <Compile Include="Data\FormControl.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Log.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Media.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Product.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProductVariant.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Purchase.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PurchaseProductVariant.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Setting.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\State.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StockAllocation.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Supplier.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserAttribute.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserRole.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserRoleAttribute.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Warehouse.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WarehouseType.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ZuluDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZuluDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ZuluObjectContext.ObjectSet.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZuluObjectContext.ObjectSet.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ZuluObjectContext.ObjectSet.Context.Extensions.cs">
+      <DependentUpon>ZuluObjectContext.ObjectSet.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ZuluObjectContext.ObjectSet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZuluObjectContext.ObjectSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\DependencyResolverFactory.cs" />
+    <Compile Include="Infrastructure\IDependencyResolver.cs" />
+    <Compile Include="Infrastructure\IDependencyResolverFactory.cs" />
+    <Compile Include="Infrastructure\IoC.cs" />
+    <Compile Include="Infrastructure\UnityDependencyResolver.cs" />
+    <Compile Include="Infrastructure\UnityPerExecutionContextLifetimeManager.cs" />
+    <Compile Include="Logs\ILogService.cs" />
+    <Compile Include="Logs\Log.cs" />
+    <Compile Include="Logs\LogService.cs" />
+    <Compile Include="Logs\LogSeverityTypeEnum.cs" />
+    <Compile Include="Medias\Extension.cs" />
+    <Compile Include="Medias\IMediaService.cs" />
+    <Compile Include="Medias\Media.cs" />
+    <Compile Include="Medias\MediaService.cs" />
+    <Compile Include="Medias\PictureTypeEnum.cs" />
+    <Compile Include="OrdersPurchases\IPurchaseService.cs" />
+    <Compile Include="OrdersPurchases\Purchase.cs" />
+    <Compile Include="OrdersPurchases\PurchaseProductVariant.cs" />
+    <Compile Include="OrdersPurchases\PurchaseService.cs" />
+    <Compile Include="Products\Category.cs" />
+    <Compile Include="Products\IProductService.cs" />
+    <Compile Include="Products\Manufacturer.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductCategoryMapping.cs" />
+    <Compile Include="Products\ProductService.cs" />
+    <Compile Include="Products\ProductVariant.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\ApplicationSetting.cs" />
+    <Compile Include="Settings\ISettingService.cs" />
+    <Compile Include="Settings\Setting.cs" />
+    <Compile Include="Settings\SettingService.cs" />
+    <Compile Include="Users\IUserService.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Users\UserAttribute.cs" />
+    <Compile Include="Users\UserRole.cs" />
+    <Compile Include="Users\UserRoleAttribute.cs" />
+    <Compile Include="Users\UserService.cs" />
+    <Compile Include="Util\ZuluHelper.cs" />
+    <Compile Include="ZuluContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Data\ZuluDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ZuluDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\ZuluObjectContext.ObjectSet.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ZuluObjectContext.ObjectSet.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\ZuluObjectContext.ObjectSet.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ZuluObjectContext.ObjectSet.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Zulu.BusinessService.Data.ZuluDataContext.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Addresses\" />
+    <Folder Include="Distributors\" />
+    <Folder Include="Locations\" />
+    <Folder Include="Report\" />
+    <Folder Include="UserControls\" />
+    <Folder Include="Warehouses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
